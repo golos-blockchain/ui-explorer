@@ -1,6 +1,6 @@
 # Golos Explorer!
 
-## [explorer.golos.io](https://explorer.golos.io/) - this service for viewing transactions blockchain Golos in real-time. This platform is a thin client, that works without a backend (only frontend and blockchain).
+## [explorer.golos.id](https://explorer.golos.id/) - this service for viewing transactions blockchain Golos in real-time. This platform is a thin client, that works without a backend (only frontend and blockchain).
 
 ### The service is written in Pure JavaScript (native), without the use of frameworks and additional libraries for writing code.
 

@@ -4,8 +4,6 @@
 		<title>Golos Explorer - Golos Blockchain Explorer</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49827796 = new Ya.Metrika2({ id:49827796, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49827796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124460708-1"></script>
 		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-124460708-1');</script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.1.0/dist/yeti/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
@@ -26,13 +24,13 @@
 		<meta property="og:image:height" content="279">
 		<meta property="og:description" content="Golos Blockchain Explorer">
 		<meta property="og:title" content="Golos Explorer">
-		<meta property="og:url" content="https://explorer.golos.io">
+		<meta property="og:url" content="https://explorer.golos.id">
 		<meta property="og:image" content="https://explorer.golos.io/graphics/og-image.jpg">
 		<meta property="og:image:url" content="https://explorer.golos.io/graphics/og-image.jpg">
 		<meta property="og:image:secure_url" content="https://explorer.golos.io/graphics/og-image.jpg">
 		<meta property="og:type" content="website">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:url" content="https://explorer.golos.io">
+		<meta name="twitter:url" content="https://explorer.golos.id">
 		<meta name="twitter:title" content="Golos Explorer">
 		<meta name="twitter:description" content="Golos Blockchain Explorer">
 		<meta name="twitter:image" content="https://explorer.golos.io/graphics/og-image.jpg">
@@ -193,6 +191,20 @@
 
 										<tr><td>Comments Window</td><td><b data-prop="comments_window">...</b></td></tr>
 										<tr><td>Comments per Window</td><td><b data-prop="comments_per_window">...</b></td></tr>
+
+										<!-- 22 HF - witnesses ++ -->
+										<tr><td>Vote regeneration per day</td><td><b data-prop="vote_regeneration_per_day">...</b></td></tr>
+										<tr><td>SBD debt convert rate</td><td><b data-prop="sbd_debt_convert_rate">...</b></td></tr>
+										<tr><td>Worker reward percent</td><td><b data-prop="worker_reward_percent">...</b></td></tr>
+
+										<tr><td>Witness_reward percent</td><td><b data-prop="witness_reward_percent">...</b></td></tr>
+										<tr><td>Witness skipping reset time</td><td><b data-prop="witness_skipping_reset_time">...</b></td></tr>
+										<tr><td>Witness idleness time</td><td><b data-prop="witness_idleness_time">...</b></td></tr>
+										<tr><td>Account idleness time</td><td><b data-prop="account_idleness_time">...</b></td></tr>
+
+										<tr><td>Vesting reward percent</td><td><b data-prop="vesting_reward_percent">...</b></td></tr>
+										<tr><td>Worker request creation fee</td><td><b data-prop="worker_request_creation_fee">...</b></td></tr>
+										<tr><td>Worker request approve min percent</td><td><b data-prop="worker_request_approve_min_percent">...</b></td></tr>
 									</tbody>
 							</table>
 						</div>
@@ -231,7 +243,8 @@
 									<tr><td>Max virtual bandwidth</td><td><b data-prop="max_virtual_bandwidth">...</b></td></tr>
 									<tr><td>Head block id</td><td class="column-max"><b data-prop="head_block_id">...</b></td></tr>
 									<tr><td>Recent slots filled</td><td class="column-max"><b data-prop="recent_slots_filled">...</b></td></tr>
-									<tr><td>Vote regeneration per day</td><td><b data-prop="vote_regeneration_per_day">...</b></td></tr>
+
+									<tr><td>SBD debt percent</td><td><b data-prop="sbd_debt_percent">...</b></td></tr>
 								</tbody>
 							</table>
 						</div>
@@ -425,7 +438,7 @@
 									<h5>Witnesses</h5>
 								</div>
 								<div class="col">
-									<a class="btn btn-success float-right" target="_blank" href="https://golos.io/~witnesses"><span class="icon-point-right"></span> Witness Voting</a>
+									<a class="btn btn-success float-right" target="_blank" href="https://golos.id/~witnesses"><span class="icon-point-right"></span> Witness Voting</a>
 								</div>
 							</div>
 							<p>DPOS elected witnesses and relevant historical information.</p>
@@ -463,7 +476,7 @@
 									<h5>Accounts</h5>
 								</div>
 								<div class="col">
-									<a class="btn btn-success float-right" target="_blank" href="https://golos.io/create_account"><span class="icon-point-right"></span> Create account</a>
+									<a class="btn btn-success float-right" target="_blank" href="https://golos.id/create_account"><span class="icon-point-right"></span> Create account</a>
 								</div>
 							</div>
 							<p>Accounts sorted by various metrics (richlist by default).</p>
@@ -475,7 +488,7 @@
 									<h5>Posts</h5>
 								</div>
 								<div class="col">
-									<a class="btn btn-success float-right" target="_blank" href="https://golos.io/submit"><span class="icon-pencil2"></span> Create post</a>
+									<a class="btn btn-success float-right" target="_blank" href="https://golos.id/submit"><span class="icon-pencil2"></span> Create post</a>
 								</div>
 							</div>
 							<!--<p>Accounts sorted by various metrics (richlist by default).</p>-->
@@ -509,7 +522,7 @@
 		</article>
 		<footer class="footer">
 			<div class="container-fluid">
-				<span class="text-muted">GolosExplorer @ 2018</span>
+				<span class="text-muted">GolosExplorer @ 2018-2020</span>
 			</div>
 		</footer>
 		<div class="modal" id="modal-about-block" tabindex="-1" role="dialog">
@@ -590,7 +603,7 @@
 					<div class="modal-body">
 						<form class="form-inline" id="node-address">
 							<div class="input-group">
-								<input class="form-control" name="node-address" type="url" placeholder="wss://ws.golos.io" aria-label="wss://ws.golos.io" value="wss://ws.golos.io" required="">
+								<input class="form-control" name="node-address" type="url" placeholder="wss://api-full.golos.id/ws" aria-label="wss://api-full.golos.id/ws" value="wss://api-full.golos.id/ws" required="">
 								<button class="btn btn-danger" id="reset-node-address" type="button"><span class="icon-spinner11"></span></button>
 								<button class="btn btn-success" type="submit"><span class="icon-database"></span> Change</button>
 							</div>

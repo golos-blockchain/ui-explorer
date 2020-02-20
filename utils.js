@@ -7,8 +7,8 @@ let operationFormatter = (object) => {
 			case 'title': case 'body': case 'memo': continue;
 			case 'parent_author': operation.parent_author = object[key]; break;
 			case 'author': case 'comment_author': operation.author = object[key]; break;
-			case 'parent_permlink': operationValue = `<a target="_blank" href="https://golos.io/@${operation.parent_author}/${operationValue}">${operationValue}</a>`; break;
-			case 'permlink': case 'comment_permlink': operationValue = `<a target="_blank" href="https://golos.io/@${operation.author}/${operationValue}">${operationValue}</a>`; break;
+			case 'parent_permlink': operationValue = `<a target="_blank" href="https://golos.id/@${operation.parent_author}/${operationValue}">${operationValue}</a>`; break;
+			case 'permlink': case 'comment_permlink': operationValue = `<a target="_blank" href="https://golos.id/@${operation.author}/${operationValue}">${operationValue}</a>`; break;
 		}
 		let keyBeauty = key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ');
 		if (typeof(object[key]) !== 'object') {

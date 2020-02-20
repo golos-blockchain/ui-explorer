@@ -12,7 +12,7 @@ let $modalGetConfig = new Modal(document.getElementById('modal-get-config'));
 let $modalAboutBlock = new Modal(document.getElementById('modal-about-block'));
 let $modalNodeAddress = new Modal(document.getElementById('modal-node-address'));
 let $searchVal = $search.querySelector('.form-control[name="search"]');
-let defaultWebsocket = 'wss://ws.golos.io';
+let defaultWebsocket = 'wss://api-full.golos.id/ws';
 let totalVestingShares;
 let totalVestingFundSteem;
 let currentPageNumber = 1;
@@ -140,9 +140,9 @@ golos.api.streamBlockNumber((err, lastBlock) => {
 			else if (err) console.error(err);
 		});
 	}
-	
+
 	getDynamicGlobalPropertiesHandler();
-	
+
 });
 
 let getDynamicGlobalPropertiesHandler = () => {
@@ -234,7 +234,7 @@ let getBlockFullInfo = (blockNumberVal) => {
 				$newRow.className = 'table-active';
 				$newRow.innerHTML = `<tr><td colspan="2">&nbsp;</td></tr>`;
 			});
-			
+
 			let blockStr = JSON.stringify(block);
 			blockStr = js_beautify(blockStr);
 			$aboutBlockCode.innerHTML = blockStr;
@@ -308,7 +308,7 @@ let getAccountInfo = () => {
 			let currentVotingPower = account[0].voting_power + (10000 * voteAge / 432000);
 			account[0].voting_power = Math.min(currentVotingPower / 100, 100).toFixed(2) + '%';
 			if (account[0].witness_votes.length == 0) account[0].witness_votes = notResultText;
-			
+
 			let jsonMetadata;
 			try {
 				jsonMetadata = JSON.parse(account[0].json_metadata);
@@ -344,7 +344,7 @@ let getAccountInfo = () => {
 				$aboutAccountPage.querySelector('[data="profile_image"]').src = 'graphics/noavatar.png';
 				$aboutAccountPage.querySelector('[data="cover_image"]').style.display = 'none';
 			}
-			
+
 			// balance, mined, sbd_balance, memo_key, recovery_account, created, last_account_update, post_count, last_post, reputation, witness_votes, power, voting_power, name, location, gender, select_tags, about
 			for (let key in account[0]) {
 				let $aboutAccountPageParam = $aboutAccountPage.querySelector(`[data="${key}"]`);
@@ -513,7 +513,7 @@ let getBlockInfo = (blockNumberVal, operationName, callback) => {
 					}
 				});
 			});
-			
+
 			block.transactions = blockTransactionsArr;
 			let blockStr = JSON.stringify(block);
 			blockStr = js_beautify(blockStr);
@@ -587,7 +587,7 @@ let tableOptions = {
 };
 
 window.ui = SwaggerUIBundle({
-	url: 'https://explorer.golos.io/swagger.json',
+	url: 'https://explorer.golos.id/swagger.json',
 	dom_id: '#swagger-ui'
 });
 
@@ -669,7 +669,7 @@ window.addEventListener('hashchange', () => {
 								$newRow.innerHTML = `<tr>
 												<td class="witness-rank">${witnessRank}</td>
 												<td>
-													<a target="_blank" href="#account/${witness.owner}"><img class="rounded float-left" data-username="${witness.owner}" src="https://golos.io/assets/0ee064e31a180b13aca01418634567a1.png"></a>
+													<a target="_blank" href="#account/${witness.owner}"><img class="rounded float-left" data-username="${witness.owner}" src="https://golos.id/assets/0ee064e31a180b13aca01418634567a1.png"></a>
 													<h3><a ${witnessRank < 20 ? ' style="font-weight: bold"' : ''} target="_blank" href="#account/${witness.owner}">${witness.owner}</a></h3>
 													<a class="font-weight-light text-dark witness-url" target="_blank" href="${witness.url}">witness url</a>
 												</td>
@@ -699,7 +699,7 @@ window.addEventListener('hashchange', () => {
 									accounts.forEach((account) => {
 										try {
 											let jsonMetadata = JSON.parse(account.json_metadata);
-											if (jsonMetadata.profile && jsonMetadata.profile.profile_image) 
+											if (jsonMetadata.profile && jsonMetadata.profile.profile_image)
 											$witnessesTableTbody.querySelector('img[data-username="' + account.name + '"]').src = jsonMetadata.profile.profile_image;
 										}
 										catch (e) {
@@ -729,7 +729,7 @@ window.addEventListener('hashchange', () => {
 					if ( ! accountsTableOptions) {
 						accountsTableOptions = Object.assign({}, tableOptions);
 						accountsTableOptions.columnDefs = [
-							{ headerName: 'Account', field: 'name', cellRenderer: (params) => { return params.data ? `<a target="_blank" href="#account/${params.value}"><img class="rounded float-left" src="${(params.data.profile_image ? params.data.profile_image : 'https://golos.io/assets/0ee064e31a180b13aca01418634567a1.png')}"></a><h3><a target="_blank" href="#account/${params.value}">${params.value}</a></h3>` : null; }, filter: 'agTextColumnFilter' },
+							{ headerName: 'Account', field: 'name', cellRenderer: (params) => { return params.data ? `<a target="_blank" href="#account/${params.value}"><img class="rounded float-left" src="${(params.data.profile_image ? params.data.profile_image : 'https://golos.id/assets/0ee064e31a180b13aca01418634567a1.png')}"></a><h3><a target="_blank" href="#account/${params.value}">${params.value}</a></h3>` : null; }, filter: 'agTextColumnFilter' },
 							{ headerName: 'Created', field: 'created' },
 							{ headerName: 'Posts', field: 'post_count', cellClass: 'posts' },
 							{ headerName: 'GESTS', field: 'vesting_shares_value', cellClass: 'vests' },
@@ -776,7 +776,7 @@ window.addEventListener('hashchange', () => {
 							{ headerName: 'Created', field: 'created' },
 							{ headerName: 'Author', field: 'author' },
 							{ headerName: 'Payout', field: 'total_payout_value', cellRenderer: (params) => { return params.data ? params.value + ' ' + params.data.total_payout_symbol : null; }, filter: 'agNumberColumnFilter' },
-							{ headerName: 'Permlink', field: 'permlink', cellRenderer: (params) => { return `<a target="_blank" href="https://golos.io/${params.data.parent_permlink}/@${params.data.author}/${params.value}">${params.value}</a>`; } },
+							{ headerName: 'Permlink', field: 'permlink', cellRenderer: (params) => { return `<a target="_blank" href="https://golos.id/${params.data.parent_permlink}/@${params.data.author}/${params.value}">${params.value}</a>`; } },
 							{ headerName: 'Main tag', field: 'parent_permlink' },
 							{ headerName: 'Title', field: 'title' },
 						];
