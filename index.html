@@ -132,6 +132,36 @@
 					</div>
 					<div class="col-4">
 						<div class="table-responsive">
+							<table class="table table-bordered table-hover table-sm" id="global-properties-table">
+								<thead>
+									<tr class="table-primary">
+										<th scope="col" colspan="2">
+											<span id="global-properties-head">Global Properties</span>
+											<button type="button" class="btn btn-danger btn-sm float-right" id="get-config-btn"><span class="icon-cog"></span> Show Blockchain Config</button>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td>Time</td><td><b data-prop="time">...</b></td></tr>
+									<tr><td>Current witness</td><td><b data-prop="current_witness">...</b></td></tr>
+									<tr><td>Head block number</td><td class="column-max"><b data-prop="head_block_number">...</b></td></tr>
+									<tr><td>Last irreversible block</td><td><b data-prop="last_irreversible_block_num">...</b></td></tr>	
+									<tr><td>Current supply</td><td><b data-prop="current_supply">...</b></td></tr>
+									<tr><td>Current SBD supply</td><td><b data-prop="current_sbd_supply">...</b></td></tr>
+									<tr><td>Virtual supply</td><td><b data-prop="virtual_supply">...</b></td></tr>
+									<tr><td>Total vesting fund steem</td><td><b data-prop="total_vesting_fund_steem">...</b></td></tr>
+									<tr><td>Total vesting shares</td><td><b data-prop="total_vesting_shares">...</b></td></tr>
+									<tr><td>Accumulative emission day</td><td><b data-prop="accumulative_emission_per_day">...</b></td></tr>
+									<tr><td>Total reward fund steem</td><td><b data-prop="total_reward_fund_steem">...</b></td></tr>
+									<tr><td>SBD print rate</td><td><b data-prop="sbd_print_rate">...</b></td></tr>
+									<tr><td>SBD debt percent</td><td><b data-prop="sbd_debt_percent">...</b></td></tr>
+									<tr><td>Max virtual bandwidth</td><td><b data-prop="max_virtual_bandwidth">...</b></td></tr>
+									<tr><td>Average block size</td><td><b data-prop="average_block_size">...</b></td></tr>
+									<tr><td>Current reserve ratio</td><td><b data-prop="current_reserve_ratio">...</b></td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="table-responsive">
 							<table class="table table-bordered table-hover table-sm" id="chain-properties-table">
 								<thead>
 									<tr class="table-primary">
@@ -157,18 +187,18 @@
 										<tr><td>Comments per Window</td><td><b data-prop="comments_per_window">...</b></td></tr>
 										<tr><td>Votes Window</td><td><b data-prop="votes_window">...</b></td></tr>
 										<tr><td>Votes per Window</td><td><b data-prop="votes_per_window">...</b></td></tr>
-										<tr><td>Auction Window Size</td><td><b data-prop="auction_window_size">...</b></td></tr>
+										<!-- <tr><td>Auction Window Size</td><td><b data-prop="auction_window_size">...</b></td></tr> -->
 										<tr><td>Max Delegated Vesting Interest Rate</td><td><b data-prop="max_delegated_vesting_interest_rate">...</b></td></tr>
 										<tr><td>Custom Ops Bandwidth Multiplier</td><td><b data-prop="custom_ops_bandwidth_multiplier">...</b></td></tr>
 										<tr><td>Min Curation Percent</td><td><b data-prop="min_curation_percent">...</b></td></tr>
 										<tr><td>Max Curation Percent</td><td><b data-prop="max_curation_percent">...</b></td></tr>
 										<tr><td>Curation Reward Curve</td><td><b data-prop="curation_reward_curve">...</b></td></tr>
-										<tr><td>Allow Distribute Auction Reward</td><td><b data-prop="allow_distribute_auction_reward">...</b></td></tr>
-										<tr><td>Allow Return Auction Reward to Fund</td><td><b data-prop="allow_return_auction_reward_to_fund">...</b></td></tr>
+										<!-- <tr><td>Allow Distribute Auction Reward</td><td><b data-prop="allow_distribute_auction_reward">...</b></td></tr>
+										<tr><td>Allow Return Auction Reward to Fund</td><td><b data-prop="allow_return_auction_reward_to_fund">...</b></td></tr> -->
 										<!-- 22 HF -->
-										<tr><td>Worker Reward Percent</td><td><b data-prop="worker_reward_percent">...</b></td></tr>
+										<!-- <tr><td>Worker Reward Percent</td><td><b data-prop="worker_reward_percent">...</b></td></tr>
 										<tr><td>Witness Reward Percent</td><td><b data-prop="witness_reward_percent">...</b></td></tr>
-										<tr><td>Vesting Reward Percent</td><td><b data-prop="vesting_reward_percent">...</b></td></tr>
+										<tr><td>Vesting Reward Percent</td><td><b data-prop="vesting_reward_percent">...</b></td></tr> -->
 										<tr><td>Worker Request Creation Fee</td><td><b data-prop="worker_request_creation_fee">...</b></td></tr>
 										<tr><td>Worker Request Approve Min Percent</td><td><b data-prop="worker_request_approve_min_percent">...</b></td></tr>
 										<tr><td>SBD Debt Convert Rate</td><td><b data-prop="sbd_debt_convert_rate">...</b></td></tr>
@@ -182,40 +212,16 @@
 										<!-- 24 HF -->
 										<tr><td>Asset Creation Fee</td><td><b data-prop="asset_creation_fee">...</b></td></tr>
 										<tr><td>Invite Transfer Interval Sec</td><td><b data-prop="invite_transfer_interval_sec">...</b></td></tr>
-									</tbody>
+										<!-- 26 HF -->
+										<tr><td>Worker Emission Percent</td><td><b data-prop="worker_emission_percent">...</b></td></tr>
+										<tr><td>Vesting Remain Percent</td><td><b data-prop="vesting_of_remain_percent">...</b></td></tr>
+										<tr><td>Convert Fee Percent</td><td><b data-prop="convert_fee_percent">...</b></td></tr>
+										<tr><td>Min Golos Power to Curate</td><td><b data-prop="min_golos_power_to_curate">...</b></td></tr>
+										<tr><td>NegRep Posting Window</td><td><b data-prop="negrep_posting_window">...</b></td></tr>
+										<tr><td>NegRep Posting per Window</td><td><b data-prop="negrep_posting_per_window">...</b></td></tr>
+									</tbody>								
 							</table>
-						</div>
-						<div class="table-responsive">
-							<table class="table table-bordered table-hover table-sm" id="global-properties-table">
-								<thead>
-									<tr class="table-primary">
-										<th scope="col" colspan="2">
-											<span id="global-properties-head">Global Properties</span>
-											<button type="button" class="btn btn-danger btn-sm float-right" id="get-config-btn"><span class="icon-cog"></span> Show Blockchain Config</button>
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr><td>Current witness</td><td><b data-prop="current_witness">...</b></td></tr>
-									<tr><td>Time</td><td><b data-prop="time">...</b></td></tr>	
-									<tr><td>Head block number</td><td class="column-max"><b data-prop="head_block_number">...</b></td></tr>
-									<tr><td>Last irreversible block num</td><td><b data-prop="last_irreversible_block_num">...</b></td></tr>	
-									<tr><td>Virtual supply</td><td><b data-prop="virtual_supply">...</b></td></tr>
-									<tr><td>Current supply</td><td><b data-prop="current_supply">...</b></td></tr>
-									<tr><td>Current SBD supply</td><td><b data-prop="current_sbd_supply">...</b></td></tr>
-									<tr><td>Total vesting fund steem</td><td><b data-prop="total_vesting_fund_steem">...</b></td></tr>
-									<tr><td>Total vesting shares</td><td><b data-prop="total_vesting_shares">...</b></td></tr>
-									<tr><td>Accumulative balance</td><td><b data-prop="accumulative_balance">...</b></td></tr>
-									<tr><td>Total reward fund steem</td><td><b data-prop="total_reward_fund_steem">...</b></td></tr>
-									<tr><td>Total reward shares2</td><td><b data-prop="total_reward_shares2">...</b></td></tr>
-									<tr><td>SBD print rate</td><td><b data-prop="sbd_print_rate">...</b></td></tr>
-									<tr><td>SBD debt percent</td><td><b data-prop="sbd_debt_percent">...</b></td></tr>
-									<tr><td>Average block size</td><td><b data-prop="average_block_size">...</b></td></tr>
-									<tr><td>Max virtual bandwidth</td><td><b data-prop="max_virtual_bandwidth">...</b></td></tr>
-									<tr><td>Current reserve ratio</td><td><b data-prop="current_reserve_ratio">...</b></td></tr>
-								</tbody>
-							</table>
-						</div>
+						</div>						
 					</div>
 				</div>
 				<div class="row">
@@ -325,7 +331,9 @@
 										<option value="transfer">transfer</option>
 										<option value="transfer_to_vesting">transfer_to_vesting</option>
 										<option value="transfer_from_tip">transfer_from_tip</option>
-										<option value="transfer_to_tip">transfer_to_tip</option>						                
+										<option value="transfer_to_tip">transfer_to_tip</option>
+										<option value="transfer_to_savings">transfer_to_savings</option>
+										<option value="transfer_from_savings">transfer_from_savings</option>
 						                <option value="claim">claim</option>
 										<option value="author_reward">author_reward</option>
 										<option value="curation_reward">curation_reward</option>
@@ -339,6 +347,7 @@
 										<option value="limit_order_cancel">limit_order_cancel</option>
 										<option value="account_create">account_create</option>
 										<option value="account_create_with_delegation">create_with_delegation</option>
+										<option value="withdraw_vesting">withdraw_vesting</option>
 										<option value="account_update">account_update</option>
 										<option value="account_witness_vote">account_witness_vote</option>
 										<option value="custom_json">custom_json</option>										
@@ -347,8 +356,9 @@
 						                <option value="account_metadata">account_metadata</option>
 						                <option value="worker_request_vote">worker_request_vote</option>
 						                <option value="invite">invite</option>
+						                <option value="interest">interest</option>
 						                <option value="asset_update">asset_update</option>
-						                <option value="asset_issue">asset_issue</option>					                
+						                <option value="asset_issue">asset_issue</option>
 									</select>
 									operation filtered from <span class="badge badge-info" id="about-account-count">...</span> transactions
 								</h5>
@@ -473,7 +483,7 @@
 		</article>
 		<footer class="footer">
 			<div class="container-fluid">
-				<span class="text-muted">Golos Explorer @ 2018-2020</span>
+				<span class="text-muted">Golos Explorer @ 2018-2021</span>
 			</div>
 		</footer>
 		<div class="modal" id="modal-about-block" tabindex="-1" role="dialog">
@@ -554,7 +564,7 @@
 					<div class="modal-body">
 						<form class="form-inline" id="node-address">
 							<div class="input-group">
-								<input class="form-control" name="node-address" type="url" placeholder="wss://api-full.golos.id/ws" aria-label="wss://api-full.golos.id/ws" value="wss://api-full.golos.id/ws" required="">
+								<input class="form-control" name="node-address" type="url" placeholder="wss://api-golos.blckchnd.com/ws" aria-label="wss://api-golos.blckchnd.com/ws" value="wss://api-golos.blckchnd.com/ws" required="">
 								<button class="btn btn-danger" id="reset-node-address" type="button"><span class="icon-spinner11"></span></button>
 								<button class="btn btn-success" type="submit"><span class="icon-database"></span> Change</button>
 							</div>
@@ -585,8 +595,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise@18.0.1/dist/ag-grid-enterprise.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/plotly.js@1.29.2/dist/plotly.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@3.18.1/swagger-ui-bundle.js"></script>
-		<script src="utils.js?201807131930"></script>
-		<script src="init.js?201809041700"></script>
+		<script src="utils.js"></script>
+		<script src="init.js"></script>
 		<script src="analytics.js"></script>
 	</body>
 </html>
