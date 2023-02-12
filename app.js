@@ -12,7 +12,7 @@ let $modalGetConfig = new Modal(document.getElementById('modal-get-config'));
 let $modalAboutBlock = new Modal(document.getElementById('modal-about-block'));
 let $modalNodeAddress = new Modal(document.getElementById('modal-node-address'));
 let $searchVal = $search.querySelector('.form-control[name="search"]');
-let defaultWebsocket = 'wss://api-full.golos.id/ws';
+let defaultWebsocket = 'wss://api-golos.blckchnd.com/ws';
 let totalVestingShares;
 let totalVestingFundSteem;
 let currentPageNumber = 1;
